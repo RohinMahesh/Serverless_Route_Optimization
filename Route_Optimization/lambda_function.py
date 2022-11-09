@@ -8,7 +8,7 @@ import uuid
 
 kinesis_client = boto3.client("kinesis")
 
-PRED_STREM = os.getenv("PRED_STREM", "route_optim_pred")
+PRED_STREAM = os.getenv("PRED_STREAM", "route_optim_pred")
 
 
 class RouteOptimization:
@@ -87,7 +87,7 @@ def lambda_handler(event, context):
 
         # Put prediction event in Kinesis Stream
         kinesis_client.put_record(
-            StreamName=PRED_STREM,
+            StreamName=PRED_STREAM,
             Data=json.dumps(prediction_event),
             PartitionKey=str(prediction_id),
         )

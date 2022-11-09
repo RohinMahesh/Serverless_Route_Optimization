@@ -1,6 +1,6 @@
 ## Overview
 
-This project consists of a serverless data science architecture for ingesting real-time streaming data of geocoordinates to find the optimal path that minimizes the distance covered. 
+This project consists of a serverless data science architecture for ingesting real-time streaming data of geocoordinates to find the optimal route that minimizes the distance covered. 
 
 The following AWS services are leveraged:
 
@@ -11,7 +11,7 @@ The following AWS services are leveraged:
 
 ## Deployment
 
-This project leverages AWS CLI for deployment of this service. The solution is packaged into a virtual environment, ontainerized using Docker, and registered in ECR. The following components are required to deploy this service:
+This project leverages AWS CLI for deployment of this service. The solution is packaged into a virtual environment, containerized using Docker, and registered in ECR. The following components are required to deploy this service:
 
 - Execution role for access to AWS resources. Specifically, for reading items from Kinesis and writing CloudWatch logs
 - Policy in IAM for GetRecord, GetRecords, PutRecord and PutRecords 
@@ -29,10 +29,9 @@ To create and run a Docker container:
 ```bash
 docker run -it --rm \
     -p 8080:8080 \
-    -e PREDICTIONS_STREAM_NAME="route_optim_pred" \
+    -e PRED_STREAM="route_optim_pred" \
     -e AWS_SECRET_KEY_ID=”YOUR_KEY” \
     -e AWS_SECRET_ACCESS_KEY=”YOUR_SECRET”\
-    -e TEST_RUN="True" \
     -e AWS_DEFAULT_REGION=”REGION” \
     route_optim:v1
 
@@ -44,7 +43,7 @@ Once the Docker image is built, create an ECR repository:
 aws ecr create-repository –repository-name duration-model
 ```
 
-Next, push this Docker image to the repositoryUri provided when creating the ECR repository. Finally, create a Lambda function via Container image using the REMOTE_IMAGE:
+Push this Docker image to the repositoryUri provided when creating the ECR repository and create a Lambda function via Container image using the REMOTE_IMAGE:
 
 ```bash
 REMOTE_URI= “” 
