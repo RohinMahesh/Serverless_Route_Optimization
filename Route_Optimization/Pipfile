@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+boto3 = "==1.15.10"
+geopy = "==2.2.0" 
+numpy = "==1.21.0"
+pytest = "==6.1.1"
+pytest-cov = "==2.10.1"
+ 
+[dev-packages]
+
+[requires]
+python_version = "3.9"
