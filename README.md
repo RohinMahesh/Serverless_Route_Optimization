@@ -1,6 +1,6 @@
 ## Overview
 
-This project consists of a serverless data science architecture for ingesting real-time streaming data of geocoordinates to find the optimal route that minimizes the distance covered. 
+This project consists of a serverless architecture for ingesting real-time streaming data of geocoordinates to find the optimal route that minimizes the distance covered. 
 
 The following AWS services are leveraged:
 
