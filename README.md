@@ -9,6 +9,8 @@ The following AWS services are leveraged:
 - Kinesis: real-time streaming data service for both requests and predictions
 - Lambda: serverless function that performs optimization
 
+![Screenshot](architecture_route_optim.png)
+
 ## Deployment
 
 This project leverages AWS CLI for deployment of this service. The solution is packaged into a virtual environment, containerized using Docker, and registered in ECR. The following components are required to deploy this service:
