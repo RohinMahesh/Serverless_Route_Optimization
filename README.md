@@ -9,7 +9,7 @@ The following AWS services are leveraged:
 - Kinesis: real-time streaming data service for both requests and predictions
 - Lambda: serverless function that performs optimization
 
-![Screenshot](architecture_route_optim.png)
+![Screenshot](docs/architecture_route_optim.png)
 
 ## Deployment
 
