@@ -1,6 +1,6 @@
 ## Overview
 
-This project consists of a serverless architecture for ingesting real-time streaming data of geocoordinates to find the optimal route between points of interest that minimizes the distance covered. 
+This project consists of a serverless architecture for ingesting real-time streaming data of geocoordinates to find the optimal route between points of interest that minimizes the distance covered. This greedy route optimization is a modification of an existing open source implementation to handle telematic data.
 
 The following AWS services are leveraged:
 
